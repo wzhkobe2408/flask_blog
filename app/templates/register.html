@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<div class="navbar">
+  {% include 'navbar.html' %}
+</div>
+{% endblock %}
+
+{% block app_content %}
+    <h1>Register Now</h1>
+    <div class="row">
+        <br/>
+        <div class="col-md-6">
+            {% import 'bootstrap/wtf.html' as wtf %}
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+{% endblock %}
